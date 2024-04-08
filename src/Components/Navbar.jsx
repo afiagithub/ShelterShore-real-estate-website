@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
+import "../custom.css";
 
 const Navbar = () => {
     const links = <>
-        <li className="bg-transparent text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
         : "border-2 border-transparent"} to="/">Home</NavLink></li>
-        <li className="bg-transparent text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
         : "border-2 border-transparent"} to="/about">About</NavLink></li>
-        <li className="bg-transparent text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
         : "border-2 border-transparent"} to="/contact">Contact</NavLink></li>
     </>
 
@@ -24,7 +25,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-3xl font-light font-pac text-deep-purple" href="/">ShelterShore</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 font-bold">
+                <ul className="menu menu-horizontal px-1 font-bold z-[1]">
                     {links}
                 </ul>
             </div>

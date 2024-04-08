@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         mont: ['"Montserrat"', "sans-serif"],
         pac: ['"Pacifico"', "sans-serif"],
-        signika: ['"Signika Negative"', "sans-serif"],
+        bebas: ['"Bebas Neue"', "sans-serif"],
       },
       colors: {
         'deep-purple': '#702963',

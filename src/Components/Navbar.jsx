@@ -1,14 +1,25 @@
 import { NavLink } from "react-router-dom";
 import "../custom.css";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const handleSigOut = () => {
+        logOut()
+            .then(() => {
+                toast.success("Logged Out")
+            })
+    }
     const links = <>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
-        : "border-2 border-transparent"} to="/">Home</NavLink></li>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
-        : "border-2 border-transparent"} to="/about">About</NavLink></li>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({isActive}) => isActive? "border-2 border-deep-purple"
-        : "border-2 border-transparent"} to="/contact">Contact</NavLink></li>
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+            : "border-2 border-transparent"} to="/">Home</NavLink></li>
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+            : "border-2 border-transparent"} to="/about">About</NavLink></li>
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+            : "border-2 border-transparent"} to="/contact">Contact</NavLink></li>
     </>
 
     return (
@@ -30,8 +41,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink className="btn bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
+                {
+                    user ? <NavLink onClick={handleSigOut} className="btn bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
+                    hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/">LogOut</NavLink> :
+                        <NavLink className="btn bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
                 hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/login">Login</NavLink>
+                }
             </div>
         </div>
     );

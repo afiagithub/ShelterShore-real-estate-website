@@ -30,7 +30,7 @@
     {
       "id": 3,
       "estate_title": "Urban Boutique Hotel",
-      "segment_name": "Hotels",
+      "segment_name": "Hotel",
       "description": "Discover the vibrant city from our stylish boutique hotel, offering modern comforts and personalized service.",
       "price": "$3,200,000",
       "Brand": "Cityscape Suites",
@@ -44,7 +44,7 @@
     {
       "id": 4,
       "estate_title": "Seaside Vacation Villa",
-      "segment_name": "Vacation Rentals",
+      "segment_name": "Vacation Rental",
       "description": "Experience luxury living by the sea in our spacious vacation villa, perfect for family getaways and romantic retreats.",
       "price": "$2,500/week",
       "Brand": "Sunset Villas",
@@ -58,7 +58,7 @@
     {
       "id": 5,
       "estate_title": "Quaint Guesthouse Retreat",
-      "segment_name": "Guesthouses",
+      "segment_name": "Guesthouse",
       "description": "Relax in the charm of our historic guesthouse retreat, nestled in a picturesque countryside setting.",
       "price": "$400,000",
       "Brand": "Tranquil Haven",
@@ -72,7 +72,7 @@
     {
       "id": 6,
       "estate_title": "Shephards Motel Oasis",
-      "segment_name": "Motels",
+      "segment_name": "Motel",
       "description": "Experience the nostalgia of a classic American roadside motel with modern amenities and friendly service.",
       "price": "$1,200,000",
       "Brand": "Vintage Motel",
@@ -86,7 +86,7 @@
     {
       "id": 7,
       "estate_title": "Luxurious Ski Resort",
-      "segment_name": "Resorts",
+      "segment_name": "Resort",
       "description": "Experience the ultimate ski-in/ski-out luxury at our alpine resort, boasting world-class slopes and amenities.",
       "price": "$7,500,000",
       "Brand": "Alpine Peaks",
@@ -100,7 +100,7 @@
     {
       "id": 8,
       "estate_title": "Charming Beach Bungalows",
-      "segment_name": "Vacation Rentals",
+      "segment_name": "Vacation Rental",
       "description": "Escape to our cozy beach bungalows, steps away from the ocean and surrounded by lush tropical gardens.",
       "price": "$150/night",
       "Brand": "Tropical Retreat",
@@ -114,7 +114,7 @@
     {
       "id": 9,
       "estate_title": "Riverside Cabin Hideaway",
-      "segment_name": "Lodges",
+      "segment_name": "Lodge",
       "description": "Experience serenity by the river in our cozy cabin hideaway, perfect for fishing, hiking, and relaxation.",
       "price": "$300,000",
       "Brand": "River's Edge Retreat",

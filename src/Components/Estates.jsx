@@ -9,7 +9,7 @@ const Estates = ({ estates }) => {
                 <p className="font-mont text-lg mt-4 mb-10 font-semibold text-center">
                     Discover Hospitality. Find Your Perfect Retreat</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
                 {
                     estates.map(estate => <EstateCard key={estate.id} estate={estate}></EstateCard>)
                 }

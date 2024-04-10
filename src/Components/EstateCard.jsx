@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const EstateCard = ({ estate }) => {
     const { estate_title, segment_name, price, status, area, location, facilities, image } = estate;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl rounded-xl">
+        <div className="card w-96 bg-base-100 shadow-xl rounded-xl h-[100%]">
             <figure className="">
                 <img src={image} alt="Shoes" className="h-60 w-full" />
             </figure>
@@ -15,7 +15,7 @@ const EstateCard = ({ estate }) => {
                 </div>
                 <h2 className="card-title">{estate_title}</h2>
                 <p>{location}</p>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 flex-grow">
                     {
                         facilities.map(facility =>
                             <div className="font-bold text-sm flex flex-row items-center text-deep-purple" key={facility}>

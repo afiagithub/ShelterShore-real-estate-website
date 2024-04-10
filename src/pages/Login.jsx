@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 const Login = () => {
-    const { signInUser, googleLogin } = useContext(AuthContext);
+    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
     const [show, setShow] = useState(false);
     const handleToggle = () => {
         setShow(!show);
@@ -28,9 +28,6 @@ const Login = () => {
             .catch((error) => {
                 console.log(error.message)
             });
-    }
-    const handleGithubLogin = () => {
-
     }
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md sm:p-10">
@@ -79,11 +76,11 @@ const Login = () => {
                     <FcGoogle />
                     <p className="text-base">Sign in with Google</p>
                 </button>
-                <div onClick={handleGithubLogin} className="text-center border-2 border-deep-purple py-3 rounded-xl flex flex-row 
+                <button onClick={() => githubLogin()} className="w-full text-center border-2 border-deep-purple py-3 rounded-xl flex flex-row 
                     items-center justify-center gap-3 text-xl">
                     <FaGithub />
                     <p className="text-base">Sign in with GitHub</p>
-                </div>
+                </button>
             </div>
         </div>
     );

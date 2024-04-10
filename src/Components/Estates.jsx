@@ -1,7 +1,6 @@
 import EstateCard from "./EstateCard";
 
 const Estates = ({ estates }) => {
-    console.log(estates)
     return (
         <div className=" mt-8 lg:mt-20 mb-5">
             <div className="estates-heading">

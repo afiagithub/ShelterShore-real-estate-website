@@ -1,5 +1,6 @@
 import { TiPointOfInterestOutline } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
+import 'animate.css';
 
 const EstateCard = ({ estate }) => {
     const { id, estate_title, segment_name, price, status, area, location, facilities, image } = estate;

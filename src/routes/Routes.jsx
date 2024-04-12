@@ -4,7 +4,6 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import About from "../pages/About";
-import Contact from "../pages/Contact";
 import ErrorPage from "../pages/ErrorPage";
 import EstateDetails from "../pages/EstateDetails";
 import PrivateRoute from "../Protected/PrivateRoute";

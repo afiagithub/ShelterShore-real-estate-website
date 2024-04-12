@@ -1,5 +1,7 @@
 import EstateCard from "./EstateCard";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const Estates = ({ estates }) => {
     return (
         <div className=" mt-8 lg:mt-20 mb-5">

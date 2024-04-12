@@ -26,7 +26,7 @@ const Login = () => {
                 console.log(result.user)
             })
             .catch((error) => {
-                console.log(error.message)
+                toast.error(error.message)
             });
     }
     return (

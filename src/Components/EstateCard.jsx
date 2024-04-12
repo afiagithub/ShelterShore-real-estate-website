@@ -2,7 +2,7 @@ import { TiPointOfInterestOutline } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 
 const EstateCard = ({ estate }) => {
-    const { estate_title, segment_name, price, status, area, location, facilities, image } = estate;
+    const { id, estate_title, segment_name, price, status, area, location, facilities, image } = estate;
     return (
         <div className="card w-96 bg-base-100 shadow-xl rounded-xl h-[100%]">
             <figure className="">
@@ -27,8 +27,8 @@ const EstateCard = ({ estate }) => {
                     <p className="text-deep-purple font-bebas">{price}</p>
                 </div>
                 <div className="card-actions ">
-                    <NavLink className="btn w-full bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
-                hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/">View Details</NavLink>
+                    <NavLink to={`/${id}`} className="btn w-full bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
+                hover:border-deep-purple hover:bg-transparent hover:text-deep-purple">View Details</NavLink>
                 </div>
             </div>
         </div>

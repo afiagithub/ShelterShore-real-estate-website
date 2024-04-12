@@ -2,7 +2,7 @@
     {
       "id": 1,
       "estate_title": "Luxury Beachfront Resort",
-      "segment_name": "Resorts",
+      "segment_name": "Resort",
       "description": "Experience unparalleled luxury at our beachfront resort with stunning ocean views and top-notch amenities.",
       "price": "$5,000,000",
       "Brand": "Ocean Haven",
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "estate_title": "Cozy Mountain Lodge",
-      "segment_name": "Lodges",
+      "segment_name": "Lodge",
       "description": "Escape to the tranquility of the mountains in our charming lodge, perfect for nature lovers and outdoor enthusiasts.",
       "price": "$800,000",
       "Brand": "Mountain Retreat",

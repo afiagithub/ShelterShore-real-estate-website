@@ -7,21 +7,26 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const signInUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
     const githubLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
 
@@ -29,6 +34,7 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = () => {
             onAuthStateChanged(auth, currentUser => {
                 setUser(currentUser)
+                setLoading(false)
                 console.log(currentUser)
             })
         }
@@ -44,6 +50,11 @@ const AuthProvider = ({ children }) => {
     }
 
     const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, logOut }
+    if(loading){
+        return <div className="text-center flex flex-col items-center justify-center h-[100vh]">
+            <span className="loading loading-spinner loading-lg text-primary"></span>
+        </div>
+    }
     return (
         <AuthContext.Provider value={AuthInfo}>
             {children}

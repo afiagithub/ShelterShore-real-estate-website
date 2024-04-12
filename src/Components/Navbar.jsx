@@ -14,11 +14,11 @@ const Navbar = () => {
             })
     }
     const links = <>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple bg-[#7029631a]"
             : "border-2 border-transparent"} to="/">Home</NavLink></li>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple bg-[#7029631a]"
             : "border-2 border-transparent"} to="/about">About</NavLink></li>
-        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple"
+        <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple bg-[#7029631a]"
             : "border-2 border-transparent"} to="/contact">Contact</NavLink></li>
     </>
 

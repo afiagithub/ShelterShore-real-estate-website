@@ -7,6 +7,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -22,6 +23,10 @@ const Register = () => {
         const { fullName, email, pass, confirmPass, photo } = data;
         if (pass.length < 6) {
             toast.error("Password must be at least 6 characters long");
+            return;
+        }
+        else if(!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(pass)){
+            toast.error("Password must have a uppercase and a lowercase letter");
             return;
         }
         else if (pass !== confirmPass) {
@@ -41,6 +46,9 @@ const Register = () => {
     }
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md sm:p-10">
+            <Helmet>
+                <title>ShelterShore | RegisterPage</title>
+            </Helmet>
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Register</h1>
                 <p className="text-sm dark:text-gray-600">Create your account</p>

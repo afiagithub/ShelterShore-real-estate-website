@@ -6,7 +6,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 const Slider = () => {
     return (
-        <div className="sliders mt-5 relative">
+        <div className="sliders lg:mt-5 relative">
             <Swiper navigation={true} modules={[Autoplay, Navigation]}
                 autoplay={{ delay: 2500, disableOnInteraction: false, }} loop={true} 
                 className="mySwiper rounded-2xl z-10">

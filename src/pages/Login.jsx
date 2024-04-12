@@ -8,6 +8,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SocialLogin from "../Components/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -37,6 +38,9 @@ const Login = () => {
     }
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md sm:p-10">
+            <Helmet>
+                <title>ShelterShore | LoginPage</title>
+            </Helmet>
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Sign in</h1>
                 <p className="text-sm dark:text-gray-600">Sign in to access your account</p>

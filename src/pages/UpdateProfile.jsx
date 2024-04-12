@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile } = useContext(AuthContext);
@@ -27,6 +28,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md sm:p-10">
+            <Helmet>
+                <title>ShelterShore | Profile</title>
+            </Helmet>
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Hello, {user.displayName}</h1>
                 <p className="text-sm dark:text-gray-600">Update Your Profile To Your Convenience</p>

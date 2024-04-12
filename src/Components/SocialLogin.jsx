@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const SocialLogin = () => {
-    const { googleLogin, githubLogin } = useContext(AuthContext);
+    const { googleLogin, githubLogin, facebookLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state || '/';
@@ -36,7 +36,7 @@ const SocialLogin = () => {
                 <button onClick={() => handleSocialLogin(githubLogin)} className="py-3">
                     <FaGithub className="text-2xl" />
                 </button>
-                <button onClick={() => handleSocialLogin(githubLogin)} className="py-3">
+                <button onClick={() => handleSocialLogin(facebookLogin)} className="py-3">
                     <LiaFacebookF className="text-2xl" />
                 </button>
             </div>

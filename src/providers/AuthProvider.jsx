@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -21,13 +22,15 @@ const AuthProvider = ({ children }) => {
     }
 
     const googleLogin = () => {
-        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
     const githubLogin = () => {
-        setLoading(true)
         return signInWithPopup(auth, githubProvider)
+    }
+
+    const facebookLogin = () => {
+        return signInWithPopup(auth, facebookProvider)
     }
 
     const updateUserProfile = (name, image) => {
@@ -56,7 +59,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
-    const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, updateUserProfile, logOut }
+    const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, facebookLogin, updateUserProfile, logOut }
     if (loading) {
         return <div className="text-center flex flex-col items-center justify-center h-[100vh]">
             <span className="loading loading-spinner loading-lg text-primary"></span>

@@ -33,13 +33,13 @@ const EstateDetails = () => {
                     <p className="py-3 px-3"><span className="font-bold"></span> {description}...</p>
 
                     <p className="py-3 px-2 font-bold w-full bg-black text-white rounded-xl mt-10">Facilities</p>
-                    <p className="py-6">
+                    <div className="py-6">
                         {
                             facilities.map(facility => <div key={facility}
                                 className="flex flex-row gap-2 items-center mr-2 font-bold px-3">
                                 <VscDebugBreakpointLogUnverified className="text-deep-purple" />{facility}</div>)
                         }
-                    </p>
+                    </div>
 
                     <p className="py-3 px-2 font-bold w-full bg-black text-white rounded-xl mt-10">Details</p>
 

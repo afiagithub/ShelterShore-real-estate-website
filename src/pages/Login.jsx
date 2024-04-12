@@ -2,17 +2,22 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SocialLogin from "../Components/SocialLogin";
 
 
 const Login = () => {
-    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
+    const { signInUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || '/';
+
     const [show, setShow] = useState(false);
+
     const handleToggle = () => {
         setShow(!show);
     }
@@ -21,9 +26,10 @@ const Login = () => {
     const onSubmit = (data) => {
         const { email, pass } = data;
         signInUser(email, pass)
-            .then((result) => {
-                toast.success("Successfully Logged In")
-                console.log(result.user)
+            .then((result) => {                
+                if (result.user)
+                    navigate(`${from}`)
+                    toast.success("Successfully Logged In")
             })
             .catch((error) => {
                 toast.error(error.message)
@@ -70,18 +76,7 @@ const Login = () => {
                     </p>
                 </div>
             </form>
-            <div className="mt-5 space-y-4">
-                <button onClick={() => googleLogin()} className=" w-full text-center border-2 border-deep-purple py-3 rounded-xl flex flex-row 
-                    items-center justify-center gap-3 text-xl">
-                    <FcGoogle />
-                    <p className="text-base">Sign in with Google</p>
-                </button>
-                <button onClick={() => githubLogin()} className="w-full text-center border-2 border-deep-purple py-3 rounded-xl flex flex-row 
-                    items-center justify-center gap-3 text-xl">
-                    <FaGithub />
-                    <p className="text-base">Sign in with GitHub</p>
-                </button>
-            </div>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

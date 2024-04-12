@@ -6,9 +6,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const [show, setShow] = useState(false);
     const handleToggle = () => {
         setShow(!show);
@@ -16,18 +19,21 @@ const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        const {name, email, pass, confirmPass} = data;
-        if(pass.length < 6){
+        const { fullName, email, pass, confirmPass, photo } = data;
+        if (pass.length < 6) {
             toast.error("Password must be at least 6 characters long");
             return;
         }
-        else if(pass !== confirmPass){
+        else if (pass !== confirmPass) {
             toast.error("Password does not match Confirm Password");
             return;
         }
         createUser(email, pass)
-            .then((result) => {
-                console.log(result.user)
+            .then(() => {
+                updateUserProfile(fullName, photo)
+                    .then(() => {
+                        navigate('/')
+                    });
             })
             .catch((error) => {
                 console.log(error.message)
@@ -54,7 +60,8 @@ const Register = () => {
                     {errors.email && <span className="text-red-700 font-semibold">This field is required</span>}
                     <div>
                         <label className="block mb-2 text-sm">Photo URL</label>
-                        <input type="text" name="photo" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
+                        <input type="text" name="photo" {...register("photo")}
+                            className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                     </div>
                     <div className="relative">
                         <div className="flex justify-between mb-2">

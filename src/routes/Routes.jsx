@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import ErrorPage from "../pages/ErrorPage";
 import EstateDetails from "../pages/EstateDetails";
 import PrivateRoute from "../Protected/PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/update",
+                element: <UpdateProfile></UpdateProfile>
             },
             {
                 path: "/about",

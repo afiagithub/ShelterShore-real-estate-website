@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    console.log(user);
     const handleSigOut = () => {
         logOut()
             .then(() => {
@@ -38,12 +39,23 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold z-[1]">
                     {links}
+                    {
+                        user?  <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple bg-[#7029631a]"
+                        : "border-2 border-transparent"} to="/update">Update Profile</NavLink></li>: ""
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
                 {
-                    user ? <NavLink onClick={handleSigOut} className="btn bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
-                    hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/">LogOut</NavLink> :
+                    user ? <div className="flex flex-row gap-3">
+                        <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <button><img className="w-12 h-12 rounded-full" src={user.photoURL || 'https://i.ibb.co/kM0BWRv/face2.jpg'} alt="" /></button>
+                        </div>
+                        <NavLink onClick={handleSigOut} className="btn bg-deep-purple text-white px-4 border-2 border-deep-purple 
+                    hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/">LogOut</NavLink>
+
+                    </div>
+                        :
                         <NavLink className="btn bg-deep-purple text-white px-8 text-lg border-2 border-deep-purple 
                 hover:border-deep-purple hover:bg-transparent hover:text-deep-purple" to="/login">Login</NavLink>
                 }

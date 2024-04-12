@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
@@ -30,6 +30,13 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, githubProvider)
     }
 
+    const updateUserProfile = (name, image) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, 
+            photoURL: image
+        })
+    }
+
     useEffect(() => {
         const unsubscribe = () => {
             onAuthStateChanged(auth, currentUser => {
@@ -42,15 +49,15 @@ const AuthProvider = ({ children }) => {
         return () => {
             unsubscribe();
         }
-        
+
     }, [])
 
     const logOut = () => {
         return signOut(auth)
     }
 
-    const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, logOut }
-    if(loading){
+    const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, updateUserProfile, logOut }
+    if (loading) {
         return <div className="text-center flex flex-col items-center justify-center h-[100vh]">
             <span className="loading loading-spinner loading-lg text-primary"></span>
         </div>

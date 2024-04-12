@@ -36,7 +36,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            <div className="absolute -bottom-[25%] lg:bottom-10 right-[20%] space-y-4 lg:space-y-0 
+            {/* <div className="absolute -bottom-[25%] lg:bottom-10 right-[20%] space-y-4 lg:space-y-0 
             lg:join border-2 border-deep-purple text-deep-purple font-bold p-5 z-40 bg-[#7029634d] rounded-2xl">
                 <div>
                 <select className="select join-item px-8 text-lg">
@@ -62,7 +62,7 @@ const Slider = () => {
                 <div className="indicator">
                     <button className="btn join-item bg-deep-purple text-white border-deep-purple text-lg">Search</button>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

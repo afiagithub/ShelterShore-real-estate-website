@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import alertImg from "../../public/error.png"
+import alertImg from "../../public/asset/error.png"
 import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {

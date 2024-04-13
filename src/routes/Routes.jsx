@@ -8,6 +8,8 @@ import ErrorPage from "../pages/ErrorPage";
 import EstateDetails from "../pages/EstateDetails";
 import PrivateRoute from "../Protected/PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
+import AgentDetails from "../pages/AgentDetails";
+import SellForm from "../pages/SellForm";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +42,15 @@ export const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About></About>
+            },
+            {
+                path: "/agents",
+                element: <AgentDetails></AgentDetails>,
+                loader: () => fetch('./FakeAgents.json'),
+            },
+            {
+                path: "/sell",
+                element: <PrivateRoute><SellForm></SellForm></PrivateRoute>,
             }
         ]
     },

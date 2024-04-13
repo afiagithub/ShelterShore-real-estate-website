@@ -2,6 +2,9 @@ import { Helmet } from "react-helmet-async";
 import Estates from "../Components/Estates";
 import Slider from "../Components/Slider";
 import { useLoaderData} from "react-router-dom";
+import Agents from "../Components/Agents";
+import BuyOrSell from "../Components/BuyOrSell";
+import Services from "../Components/Services";
 
 const Home = () => {
     const estates = useLoaderData()
@@ -12,6 +15,9 @@ const Home = () => {
             </Helmet>
            <Slider></Slider>
            <Estates estates={estates}></Estates>
+           <Agents></Agents>
+           <BuyOrSell></BuyOrSell>
+           <Services></Services>
         </div>
     );
 };

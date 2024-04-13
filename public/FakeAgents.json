@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "name": "Alexandra Smith",
+      "designation": "Senior Resort Specialist",
+      "license_number": "HRE123456",
+      "service_areas": "Caribbean Islands, Mexico Riviera",
+      "specialties": ["Luxury Resorts", "Beachfront Properties", "All-Inclusive Resorts"],
+      "email": "alexandra.smith@example.com",
+      "twitter_handle": "@AlexandraRealty",
+      "facebook_profile": "https://www.facebook.com/AlexandraRealty",
+      "phone_number": "+1 (555) 123-4567",
+      "sold_property_no": 12,
+      "description": "Alexandra brings a wealth of experience and passion for luxury hospitality to her role as a senior resort specialist. With a focus on the Caribbean and Mexico's Riviera, she excels in matching discerning clients with their dream beachfront resorts and luxurious getaways.",
+      "image": "https://i.ibb.co/WD6nVhk/agent5.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Michael Nguyen",
+      "designation": "Vacation Rental Expert",
+      "license_number": "HRE789012",
+      "service_areas": "Hawaii, Maldives, French Polynesia",
+      "specialties": ["Private Villas", "Island Retreats", "Oceanfront Rentals"],
+      "email": "michael.nguyen@example.com",
+      "twitter_handle": "@MichaelVacay",
+      "facebook_profile": "https://www.facebook.com/MichaelVacationRentals",
+      "phone_number": "+1 (555) 987-6543",
+      "sold_property_no": 18,
+      "description": "Michael specializes in curating unforgettable vacation rental experiences in some of the world's most exotic destinations. With an eye for luxury and a dedication to personalized service, he helps clients discover their perfect island retreats and oceanfront villas.",
+      "image": "https://i.ibb.co/R7yDFj4/agent1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sophie Johnson",
+      "designation": "Mountain Lodge Advisor",
+      "license_number": "HRE345678",
+      "service_areas": "Rocky Mountains, Swiss Alps",
+      "specialties": ["Alpine Chalets", "Ski Resorts", "Nature Retreats"],
+      "email": "sophie.johnson@example.com",
+      "twitter_handle": "@SophieLodgeAdvisor",
+      "facebook_profile": "https://www.facebook.com/SophieMountainLodgeAdvisor",
+      "phone_number": "+1 (555) 234-5678",
+      "sold_property_no": 8,
+      "description": "Sophie's love for nature and hospitality shines through in her role as a mountain lodge advisor. Specializing in alpine chalets and ski resorts, she helps clients find their ideal mountain retreats, whether it's for skiing adventures or peaceful nature getaways.",
+      "image": "https://i.ibb.co/HxFt5hF/agent4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "David Thompson",
+      "designation": "Luxury Hotel Consultant",
+      "license_number": "HRE567890",
+      "service_areas": "Europe, Middle East, Asia",
+      "specialties": ["Five-Star Hotels", "Boutique Resorts", "Historic Properties"],
+      "email": "david.thompson@example.com",
+      "twitter_handle": "@DavidLuxuryHotels",
+      "facebook_profile": "https://www.facebook.com/DavidLuxuryHotels",
+      "phone_number": "+1 (555) 345-6789",
+      "sold_property_no": 25,
+      "description": "David is a seasoned professional in the luxury hospitality industry, with a focus on advising clients on prestigious hotels and resorts worldwide. From elegant five-star hotels to charming boutique properties, David's expertise ensures exceptional experiences for discerning travelers.",
+      "image": "https://i.ibb.co/1r5gxwx/agent3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Amanda Lee",
+      "designation": "Beachfront Property Specialist",
+      "license_number": "HRE901234",
+      "service_areas": "California Coast, Greek Islands",
+      "specialties": ["Oceanfront Estates", "Seaside Villas", "Coastal Retreats"],
+      "email": "amanda.lee@example.com",
+      "twitter_handle": "@AmandaBeachfront",
+      "facebook_profile": "https://www.facebook.com/AmandaBeachfrontProperties",
+      "phone_number": "+1 (555) 456-7890",
+      "sold_property_no": 15,
+      "description": "Amanda's passion for coastal living shines through in her role as a beachfront property specialist. With expertise in oceanfront estates and seaside villas, she helps clients find their perfect coastal retreats along the picturesque California coast and the idyllic Greek Islands.",
+      "image": "https://i.ibb.co/W0pdpmx/agent2.jpg"
+    }
+  ]
+  

@@ -49,7 +49,7 @@ const EstateDetails = () => {
                     <p className="py-3 px-2 font-bold w-full bg-black text-white rounded-xl mt-8">Details</p>
 
                     <hr />
-                    <div className="details lg:w-3/5 my-6 flex justify-between">
+                    <div className="details lg:w-3/5 my-6 flex lg:justify-between">
                         <div className="pages space-y-2 text-deep-purple font-semibold px-3">
                             <p>Property Type:</p>
                             <p>Company:</p>

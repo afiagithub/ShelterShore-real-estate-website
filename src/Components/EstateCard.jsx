@@ -1,11 +1,13 @@
 import { TiPointOfInterestOutline } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
-import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const EstateCard = ({ estate }) => {
     const { id, estate_title, segment_name, price, status, area, location, facilities, image } = estate;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl rounded-xl h-[100%]">
+        <div className="card w-96 bg-base-100 shadow-xl rounded-xl h-[100%]" data-aos="fade-up" data-aos-duration="1000">
             <figure className="">
                 <img src={image} alt="Shoes" className="h-60 w-full" />
             </figure>

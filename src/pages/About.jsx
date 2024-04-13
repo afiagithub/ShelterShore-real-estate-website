@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import aboutImg from "../../public/about.jpg"
+import aboutImg from "../../public/asset/about.jpg"
 
 
 const About = () => {

@@ -8,7 +8,7 @@ const Services = () => {
                 <div>
                     <h2 className="font-bebas text-5xl lg:text-6xl text-center mb-3 lg:mb-8">
                         Our Services</h2>
-                    <p className="font-mont text-lg mt-4 mb-10 font-semibold text-center w-4/5 lg:w-3/5 mx-auto">
+                    <p className="font-mont text-lg mt-4 mb-10 font-semibold text-center lg:w-3/5 mx-auto">
                         Our hospitality real estate services encompass a wide range of offerings tailored to meet
                         the diverse needs of clients in the hospitality industry.</p>
                 </div>

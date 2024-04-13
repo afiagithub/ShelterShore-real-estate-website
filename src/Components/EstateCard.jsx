@@ -26,7 +26,7 @@ const EstateCard = ({ estate }) => {
                     }
                 </div>
                 <div className="flex flex-row items-center w-3/5 mt-4 text-2xl font-bold">
-                    <p className="text-deep-purple font-mont">Price: </p>
+                    <p className="font-mont">Price: </p>
                     <p className="text-deep-purple font-bebas">{price}</p>
                 </div>
                 <div className="card-actions ">

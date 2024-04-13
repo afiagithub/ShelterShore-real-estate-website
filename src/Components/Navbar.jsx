@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import logoImg from "../../public/home.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -38,7 +39,8 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl font-light font-pac text-deep-purple" href="/">ShelterShore</a>
+                <a className="btn btn-ghost text-3xl font-light font-pac text-deep-purple" href="/">
+                    <img className="h-8 lg:h-10 w-8 lg:w-10 rounded-xl" src={logoImg} alt="" /> ShelterShore</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-bold z-[1]">

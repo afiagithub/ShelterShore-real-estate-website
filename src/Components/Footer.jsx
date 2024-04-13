@@ -1,7 +1,7 @@
 import logoImg from "../../public/home.png"
 const Footer = () => {
     return (
-        <footer className="px-5 md:px-10 lg:px-14 py-5 divide-y bg-[#70296333]">
+        <footer className="px-10 lg:px-14 py-5 divide-y bg-[#70296333]">
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
@@ -11,7 +11,7 @@ const Footer = () => {
                         <span className="self-center text-2xl font-light font-pac">ShelterShore</span>
                     </a>
                 </div>
-                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+                <div className="grid text-sm gap-x-3 gap-y-8 lg:w-2/3 mx-auto sm:grid-cols-4 md:grid-cols-3">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase text-deep-purple font-bold text-xl">
                             Pages</h3>

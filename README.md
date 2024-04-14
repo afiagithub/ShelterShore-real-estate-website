@@ -46,6 +46,9 @@ https://real-estate-authenticati-770f8.web.app/
 * If an user tries to access a private route without logging in, the user is taken to the **sign in** page and after loggin in, the user is redirected to the intended page
 <br>
 
+* Footer section is fixed across all the pages of the website
+<br>
+
 * Relevant animations are added on several section of the website using *animate.css* and *AOS package*
 <br>
 
@@ -53,6 +56,7 @@ https://real-estate-authenticati-770f8.web.app/
 <br>
 
 * The 3 package plans' data are shown dynamically
+
 
 # Used npm packages -
 * AOS Package,

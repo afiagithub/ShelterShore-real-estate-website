@@ -23,10 +23,13 @@ const Footer = () => {
                                 <a rel="noopener noreferrer" href="/">Estates</a>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="/contact">Contact</a>
+                                <a rel="noopener noreferrer" href="/agents">Agents</a>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="/contact">FAQ</a>
+                                <a rel="noopener noreferrer" href="/plans">Packages</a>
+                            </li>
+                            <li>
+                                <a rel="noopener noreferrer" href="/about#contact">Contact</a>
                             </li>
                         </ul>
                     </div>

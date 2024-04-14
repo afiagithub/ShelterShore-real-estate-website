@@ -1,4 +1,4 @@
-import { useLoaderData,  } from "react-router-dom";
+import { useLoaderData, } from "react-router-dom";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FiTwitter } from "react-icons/fi";
@@ -14,26 +14,31 @@ const AgentDetails = () => {
             <Helmet>
                 <title>ShelterShore | Agents</title>
             </Helmet>
+            <h1 className="font-bebas text-5xl lg:text-6xl text-center mb-3 lg:mb-8">Meet Our Agents</h1>
+            <p className="font-mont text-lg mt-4 mb-10 font-semibold text-center w-4/5 lg:w-3/5 mx-auto">
+                Meet our dedicated team of hospitality real estate agents,
+                each passionate about delivering exceptional service.</p>
             {
-                agents.map(agent => <div key={agent.id} className="hero mb-16 border-2 border-deep-purple p-2 rounded-2xl">
+                agents.map(agent => <div key={agent.id} className="hero mb-16 border-2 border-deep-purple 
+                p-2 rounded-2xl bg-[#7029630d]">
                     <div className="flex flex-col lg:flex-row items-center gap-6">
                         <div className="md:w-2/5 lg:w-4/5">
-                        <img src={agent.image} className="h-[70vh] w-full rounded-lg shadow-2xl" />
-                        <div className="flex flex-row gap-4 items-center justify-around py-3 px-4 
+                            <img src={agent.image} className="h-[70vh] w-full rounded-lg shadow-2xl" />
+                            <div className="flex flex-row gap-4 items-center justify-around py-3 px-4 
             bg-[#70296333] text-deep-purple text-xl rounded-xl">
-                            <div className="tooltip" data-tip={agent.phone_number}>
-                                <IoCallOutline />
+                                <div className="tooltip" data-tip={agent.phone_number}>
+                                    <IoCallOutline />
+                                </div>
+                                <div className="tooltip" data-tip={agent.email}>
+                                    <MdOutlineMarkEmailRead />
+                                </div>
+                                <div className="tooltip" data-tip={agent.twitter_handle}>
+                                    <FiTwitter />
+                                </div>
+                                <div className="tooltip" data-tip={agent.facebook_profile}>
+                                    <LuFacebook />
+                                </div>
                             </div>
-                            <div className="tooltip" data-tip={agent.email}>
-                                <MdOutlineMarkEmailRead />
-                            </div>
-                            <div className="tooltip" data-tip={agent.twitter_handle}>
-                                <FiTwitter />
-                            </div>
-                            <div className="tooltip" data-tip={agent.facebook_profile}>
-                                <LuFacebook />
-                            </div>
-                        </div>
                         </div>
                         <div>
                             <h1 className="text-3xl font-bold">{agent.name}</h1>

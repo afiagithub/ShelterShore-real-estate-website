@@ -8,7 +8,6 @@ import logoImg from "../../public/home.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
     const handleSigOut = () => {
         logOut()
             .then(() => {
@@ -24,7 +23,10 @@ const Navbar = () => {
             : "border-2 border-transparent"} to="/agents">Agents</NavLink></li>
         <li className="bg-transparent mx-2 text-deep-purple"><NavLink className={({ isActive }) => isActive ? "border-2 border-deep-purple bg-[#7029631a]"
             : "border-2 border-transparent"} to="/plans">Packages</NavLink></li>
+
     </>
+
+
 
     return (
         <div className="navbar bg-base-100 px-5 md:px-10 lg:px-14 py-5">

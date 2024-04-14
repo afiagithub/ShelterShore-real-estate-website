@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/update",
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
             },
             {
                 path: "/about",
@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
             {
                 path: "/plans",
                 element: <Plans></Plans>,
-                loader: () => fetch("./FakePlan.json")
+                loader: () => fetch('./FakePlan.json')
             },
             {
                 path: "/sell",

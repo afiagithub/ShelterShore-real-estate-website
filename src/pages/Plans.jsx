@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 
 const Plans = () => {
     const plans = useLoaderData()
     return (
         <div>
+            <Helmet>
+                <title>ShelterShore | Packages</title>
+            </Helmet>
             <section className="py-5 lg:py-20 dark:bg-gray-100 dark:text-gray-800">
                 <div className="container px-4 mx-auto">
                     <div className="max-w-2xl mx-auto mb-5 lg:mb-16 text-center">
@@ -14,7 +17,8 @@ const Plans = () => {
                     </div>
                     <div className="flex flex-wrap items-stretch mx-4 lg:-mx-4">
                         {
-                            plans.map(plan => <div key={plan.id} className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+                            plans.map(plan => <div key={plan.id} className="flex w-full mb-8 sm:px-4 md:w-1/2 
+                            lg:w-1/3 lg:mb-0 hover:scale-110 hover:transition hover:ease-in-out">
                                 <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-50">
                                     <div className="space-y-2">
                                         <h4 className="font-light font-bebas text-3xl">{plan.plan_name}</h4>

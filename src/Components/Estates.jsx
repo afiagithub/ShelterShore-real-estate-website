@@ -1,4 +1,5 @@
 import EstateCard from "./EstateCard";
+import PropTypes from 'prop-types';
 
 const Estates = ({ estates }) => {
     return (
@@ -16,5 +17,9 @@ const Estates = ({ estates }) => {
         </div>
     );
 };
+
+Estates.propTypes = {
+    estates: PropTypes.array
+}
 
 export default Estates;

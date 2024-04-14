@@ -6,14 +6,16 @@ const BuyOrSell = () => {
         <div className="hero rounded-xl mt-20 mb-12" style={{
             backgroundImage: `linear-gradient(to bottom, rgba(1, 4, 5, 0.5), rgba(1, 4, 5, 0.7)),
         url(${bannerImg})`
-        }}>
+        }} data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
             <div className="hero-content text-center text-neutral-content py-20">
                 <div className="">
                     <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold w-4/5 lg:w-3/5 mx-auto leading-normal">
                         <span className="text-deep-purple font-bebas text-5xl md:text-6xl lg:text-7xl">
                             Buy or Sell </span>
                         Property Easily With Our Help</h1>
-                    <p className="mb-5 px-3 lg:px-0 lg:w-4/5 mx-auto">Whether you're looking to acquire your dream resort,
+                    <p className="mb-5 px-3 lg:px-0 lg:w-4/5 mx-auto">Whether you are looking to acquire your dream resort,
                         sell your luxury vacation rental, or invest in a lucrative hotel property,
                         our platform offers a seamless and tailored experience to meet your needs.</p>
                     <div className="flex flex-row justify-center gap-4">

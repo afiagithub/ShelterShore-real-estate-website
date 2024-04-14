@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
-    const { user, updateUserProfile } = useContext(AuthContext);
+    const { user, updateUserProfile, loading } = useContext(AuthContext);
     const userName = user.displayName;
     const userPhoto = user.photoURL;
     const navigate = useNavigate();
@@ -15,16 +15,22 @@ const UpdateProfile = () => {
 
     const onSubmit = (data) => {
         let { fullName, photo } = data;
-        if(fullName === ''){
+        if (fullName === '') {
             fullName = userName;
         }
-        else if(photo === ''){
+        else if (photo === '') {
             photo = userPhoto
         }
         updateUserProfile(fullName, photo)
             .then(() => {
                 navigate('/')
+                toast.success("Successfully Updated Profile")
             });
+    }
+    if (loading) {
+        return <div className="text-center flex flex-col items-center justify-center h-[100vh]">
+            <span className="loading loading-spinner loading-lg text-primary"></span>
+        </div>
     }
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md sm:p-10">

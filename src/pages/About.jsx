@@ -27,7 +27,7 @@ const About = () => {
             </div>
 
             {/* faq section */}
-            <section className="lg:my-10">
+            <section id="faq" className="lg:my-10">
                 <div className="container flex flex-col justify-center py-8 mx-auto ">
                     <h2 className="text-2xl font-semibold sm:text-4xl mb-4 lg:mb-7">Frequently Asked Questions</h2>
 
@@ -84,7 +84,7 @@ const About = () => {
             </section>
 
             {/* contact section */}
-            <section className="py-10 my-10 rounded-2xl dark:text-gray-900">
+            <section id="contact" className="py-10 my-10 rounded-2xl dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 md:py-0 md:px-6">
                         <h1 className="text-4xl font-bold">Get in touch</h1>

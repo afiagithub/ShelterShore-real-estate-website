@@ -15,6 +15,7 @@ const Login = () => {
     const { signInUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    console.log(location)
     const from = location?.state || '/';
 
     const [show, setShow] = useState(false);
@@ -24,7 +25,7 @@ const Login = () => {
     }
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = (data) => {        
         const { email, pass } = data;
         signInUser(email, pass)
             .then((result) => {                
@@ -32,8 +33,8 @@ const Login = () => {
                     navigate(`${from}`)
                     toast.success("Successfully Logged In")
             })
-            .catch((error) => {
-                toast.error(error.message)
+            .catch(() => {                
+                toast.error("Invalid Credential")
             });
     }
     return (

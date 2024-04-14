@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 const ErrorPage = () => {
     const navigate = useNavigate();
     return (
-        <div className="flex flex-col justify-center items-center my-10">
+        <div className="flex flex-col justify-center items-center text-center my-10 mx-3">
             <Helmet>
                 <title>ShelterShore | 404 Page</title>
             </Helmet>

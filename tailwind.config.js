@@ -13,7 +13,7 @@ export default {
         bounceInSpeed: 750,
         bounceOutSpeed: 750,
         animationDelaySpeed: 500,
-        classes: ['bounce', 'heartBeat', 'swing', 'fadeIn']
+        classes: ['bounce', 'zoomIn', 'swing', 'fadeIn']
       },
       fontFamily: {
         mont: ['"Montserrat"', "sans-serif"],
@@ -22,7 +22,6 @@ export default {
       },
       colors: {
         'deep-purple': '#702963',
-        'magenta': '#5F374B',
       },
     },
   },

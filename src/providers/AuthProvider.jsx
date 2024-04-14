@@ -22,49 +22,47 @@ const AuthProvider = ({ children }) => {
     }
 
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
     const githubLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
 
     const facebookLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, facebookProvider)
     }
 
     const updateUserProfile = (name, image) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
-            displayName: name, 
+            displayName: name,
             photoURL: image
         })
     }
 
     useEffect(() => {
-        const unsubscribe = () => {
-            onAuthStateChanged(auth, currentUser => {
-                setUser(currentUser)
-                setLoading(false)
-                console.log(currentUser)
-            })
-        }
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser)
+            setLoading(false)
+        });
 
         return () => {
-            unsubscribe();
+            unSubscribe();
         }
 
     }, [])
 
     const logOut = () => {
+        setUser(null)
         return signOut(auth)
     }
 
-    const AuthInfo = { user, createUser, signInUser, googleLogin, githubLogin, facebookLogin, updateUserProfile, logOut }
-    if (loading) {
-        return <div className="text-center flex flex-col items-center justify-center h-[100vh]">
-            <span className="loading loading-spinner loading-lg text-primary"></span>
-        </div>
-    }
+    const AuthInfo = { user, loading, setLoading, createUser, signInUser, googleLogin, githubLogin, facebookLogin, updateUserProfile, logOut }
+
     return (
         <AuthContext.Provider value={AuthInfo}>
             {children}

@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
 import { Helmet } from "react-helmet-async";
+import PropTypes from 'prop-types';
 
 const EstateDetails = () => {
     const estates = useLoaderData();
@@ -69,5 +70,20 @@ const EstateDetails = () => {
         </div>
     );
 };
+
+EstateDetails.propTypes = {
+    estate: PropTypes.obj,
+    estate_title: PropTypes.string,
+    segment_name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.string,
+    Brand: PropTypes.string,
+    status: PropTypes.string,
+    area: PropTypes.number,
+    location: PropTypes.string,
+    facilities: PropTypes.array,
+    image: PropTypes.string,
+    parking: PropTypes.number,
+}
 
 export default EstateDetails;

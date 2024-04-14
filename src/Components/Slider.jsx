@@ -37,33 +37,6 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            {/* <div className="absolute -bottom-[25%] lg:bottom-10 right-[20%] space-y-4 lg:space-y-0 
-            lg:join border-2 border-deep-purple text-deep-purple font-bold p-5 z-40 bg-[#7029634d] rounded-2xl">
-                <div>
-                <select className="select join-item px-8 text-lg">
-                    <option disabled selected>Hospitality Type</option>
-                    <option>Hotel</option>
-                    <option>Motel</option>
-                    <option>Resort</option>
-                    <option>Vacation Rental</option>
-                    <option>Lodge</option>
-                    <option>Guesthouse</option>
-                </select>
-                </div>
-                <select className="select select-bordered join-item px-8 text-lg">
-                    <option disabled selected>Status</option>
-                    <option>Sale</option>
-                    <option>Rent</option>
-                </select>
-                <div>
-                    <div>
-                        <input className="input input-bordered join-item" placeholder="City Name" />
-                    </div>
-                </div>
-                <div className="indicator">
-                    <button className="btn join-item bg-deep-purple text-white border-deep-purple text-lg">Search</button>
-                </div>
-            </div> */}
         </div>
     );
 };

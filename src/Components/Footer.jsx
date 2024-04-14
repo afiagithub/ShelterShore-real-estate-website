@@ -11,7 +11,7 @@ const Footer = () => {
                         <span className="self-center text-2xl font-light font-pac">ShelterShore</span>
                     </a>
                 </div>
-                <div className="grid text-sm gap-x-3 gap-y-8 lg:w-2/3 mx-auto sm:grid-cols-4 md:grid-cols-3">
+                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 mx-auto sm:grid-cols-4 md:grid-cols-3">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase text-deep-purple font-bold text-xl">
                             Pages</h3>

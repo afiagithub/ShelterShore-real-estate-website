@@ -10,6 +10,7 @@ import PrivateRoute from "../Protected/PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
 import AgentDetails from "../pages/AgentDetails";
 import SellForm from "../pages/SellForm";
+import Plans from "../pages/Plans";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +48,11 @@ export const router = createBrowserRouter([
                 path: "/agents",
                 element: <AgentDetails></AgentDetails>,
                 loader: () => fetch('./FakeAgents.json'),
+            },
+            {
+                path: "/plans",
+                element: <Plans></Plans>,
+                loader: () => fetch("./FakePlan.json")
             },
             {
                 path: "/sell",

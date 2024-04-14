@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "plan_name": "Silver Plan",
+      "price": "$99/month",
+      "short_description": "Ideal for individuals or small businesses.",
+      "features": [
+        "Access to basic property listings",
+        "Limited market analysis reports",
+        "Email support"
+      ]
+    },
+    {
+      "id": 2,
+      "plan_name": "Gold Plan",
+      "price": "$199/month",
+      "short_description": "Perfect for growing agencies and mid-sized companies.",
+      "features": [
+        "Access to advanced property listings",
+        "Full market analysis reports",
+        "Dedicated account manager",
+        "Priority support"
+      ]
+    },
+    {
+      "id": 3,
+      "plan_name": "Platinum Plan",
+      "price": "$499/month",
+      "short_description": "Designed for large enterprises and industry leaders.",
+      "features": [
+        "Unlimited access to premium property listings",
+        "Comprehensive market analysis reports",
+        "Customizable branding options"
+      ]
+    }
+  ]
+  
